@@ -1,0 +1,148 @@
+```html
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Social Media Analytics | Kuntalika Dey</title>
+
+    <link rel="stylesheet"
+          type="text/css"
+          href="{{ url_for('static', filename='styles/styles.css') }}">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section id="main">
+
+        <!-- Navigation -->
+        <nav>
+            <h1>ReviewBeta</h1>
+
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Result</a></li>
+            </ul>
+        </nav>
+
+        <!-- Introduction -->
+        <section id="intro">
+
+            <img src="{{ url_for('static', filename='Twitter.jpg') }}"
+                 alt="Twitter sentiment analysis">
+
+            <div class="desc-text">
+                <h1 class="center">Twitter Sentiment Analysis</h1>
+
+                <p>
+                    Sentiment analysis is the process of detecting positive
+                    or negative sentiment in text. It is often used by
+                    businesses to analyze social media data, understand
+                    audience opinions, gauge brand reputation, and discover
+                    customer insights.
+                    <br><br>
+                    Twitter sentiment analysis helps classify posts according
+                    to their sentiment and understand engagement patterns
+                    across social media conversations.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Search Section -->
+        <section id="search">
+
+            <h1 class="center">
+                Enter the Topic of Tweets for Sentiment Analysis
+            </h1>
+
+            <form action="{{ url_for('index') }}" method="POST">
+
+                <textarea
+                    wrap="off"
+                    name="Tweet_URL"
+                    placeholder="Enter a topic, keyword, or account..."
+                    rows="1"
+                    cols="50"
+                    required></textarea>
+
+                <button type="submit" aria-label="Search">
+                    <i class="fa fa-search"></i>
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Example Section -->
+        <section id="vid">
+
+            <img src="{{ url_for('static', filename='example.gif') }}"
+                 alt="Example of sentiment analysis">
+
+        </section>
+
+        <!-- Footer / Project Credits -->
+        <footer>
+            <div class="foot">
+
+                <h1 class="center">PROJECT DEVELOPED BY</h1>
+
+                <div class="people">
+
+                    <div class="person">
+
+                        <h2>KUNTALIKA DEY</h2>
+
+                        <p>B.Tech in Computer Science and Engineering</p>
+
+                        <p>
+                            SOCIAL MEDIA ANALYTICS
+                            <br>
+                            SENTIMENT ANALYSIS
+                        </p>
+
+                        <div class="social">
+
+                            <!-- Add your actual profile URLs below -->
+                            <a href="https://github.com/kuntalikadey"
+                               title="GitHub"
+                               aria-label="GitHub">
+                                <i class="fa fa-github"></i>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/kuntalikadey?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                               title="LinkedIn"
+                               aria-label="LinkedIn">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <h4 class="center">
+                    SOCIAL MEDIA ANALYTICS DASHBOARD
+                </h4>
+
+                <p class="center">
+                    Built with Python, Flask, Streamlit and Power BI
+                </p>
+
+                <p class="center">
+                    Copyright &copy; 2026 Kuntalika Dey
+                </p>
+
+            </div>
+        </footer>
+
+    </section>
+</body>
+</html>
+```
